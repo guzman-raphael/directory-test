@@ -1,0 +1,17 @@
+version: '2.4'
+x-net: &net
+  networks:
+      - main
+services:
+  dj:
+    <<: *net
+    build: .
+    image: runtime-dir:v1.0
+    environment:
+      - LOCAL_STORE
+      - ROOT_PATH
+    volumes:
+      - ${ROOT_PATH}:${LOCAL_STORE}:ro
+      - ./search_path.sh:/search_path.sh
+networks:
+  main:

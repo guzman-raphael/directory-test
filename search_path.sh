@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+# PATH_CHOICE=/github/raphael
+# WIN_FS=FALSE
+# PATH_CHOICE="${PATH_CHOICE/$ROOT_PATH/$LOCAL_STORE}"
+
+PATH_CHOICE=C:\\github\\raphael
+WIN_FS=TRUE
+PATH_CHOICE="${PATH_CHOICE/$ROOT_PATH/$LOCAL_STORE}"   
+
+echo $PATH_CHOICE
+ls -la $PATH_CHOICE   
